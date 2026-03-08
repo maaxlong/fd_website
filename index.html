@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frankie Dytor</title>
+  <meta name="description" content="Official website of Frankie Dytor" />
+
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #F7CD8B;
+      --text: #111111;
+      --muted: #666666;
+      --line: rgba(17,17,17,0.15);
+      --max: 1100px;
+      --sans: "EB Garamond", Garamond, "Times New Roman", serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .wrapper {
+      width: min(var(--max), calc(100% - 2.5rem));
+      margin: 0 auto;
+      padding: 3rem 0 4rem;
+    }
+
+    .intro {
+      display: flex;
+      align-items: flex-start;
+      gap: 3rem;
+    }
+
+    .text {
+      flex: 1;
+      max-width: 640px;
+    }
+
+    .portrait {
+      width: 100%;
+      max-width: 400px;
+      flex-shrink: 0;
+    }
+
+    .site-name {
+      font-size: clamp(2.5rem,5vw,4rem);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      text-align: center;
+      margin: 0 0 4rem 0;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem,5vw,4rem);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin: 0 0 1.25rem 0;
+    }
+
+    h2 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin: 3rem 0 1rem 0;
+    }
+
+    p {
+      font-size: clamp(1.05rem,1.5vw,1.2rem);
+      line-height: 1.8;
+      margin: 0 0 1.25rem 0;
+      max-width: 38em;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .links a {
+      text-decoration: none;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 0.1rem;
+    }
+
+    footer {
+      margin-top: 4rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+      border-top: 1px solid var(--line);
+      padding-top: 1.5rem;
+    }
+
+    @media (max-width: 800px) {
+      .intro {
+        flex-direction: column-reverse;
+      }
+
+      .portrait {
+        max-width: 100%;
+      }
+
+      .wrapper {
+        width: calc(100% - 2rem);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <h1 class="site-name">Frankie Dytor</h1>
+
+    <div class="intro">
+
+      <div class="portrait">
+        <img
+          src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80"
+          alt="Portrait of Frankie Dytor"
+        >
+      </div>
+
+      <div class="text">
+
+        
+
+        <p>
+          Frankie Dytor is a writer and researcher. This site provides a brief
+          introduction, links to publications, and contact information.
+        </p>
+
+        <p>
+          Replace this text with two or three short paragraphs describing
+          current work, interests, and recent publications. Minimal author
+          sites generally work best with concise prose and generous spacing.
+        </p>
+
+        <h2>Selected Links</h2>
+
+        <div class="links">
+          <a href="#">Publications</a>
+          <a href="#">Instagram</a>
+          <a href="#">Substack</a>
+        </div>
+
+        <h2>Contact</h2>
+
+        <p>
+          Email: <a href="mailto:hello@frankiedytor.com">hello@frankiedytor.com</a>
+        </p>
+
+      </div>
+
+    </div>
+
+    <footer>
+      © <span id="year"></span> Frankie Dytor
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
